@@ -1,15 +1,41 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8">
-    <link rel="icon" type="image/svg+xml" href="/vite.svg">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- link css here only when ccs is not imported in js yet -->
-    <!-- <link rel="stylesheet" href="/css/style.css"> -->
-    <title>Hello</title>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-    <!-- <script src="./js/app.js" type="module"></script> -->
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="description du site">
+  <title> simon </title>
+  <link rel="stylesheet" href="style.scss">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div class="score_container">
+    <div class="score">
+      <p>Score</p>
+      <p id="score">0</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="btn_container">
+      <div id="play_restart" class="btn">play</div>
+    </div>
+
+    <div class="game">
+      <button id="blue"></button>
+      <button id="pink"></button>
+      <button id="green"></button>
+      <button id="yellow"></button>
+    </div>
+  </div>
+
+  <script src="app.js" type="module"></script>
+</body>
+
 </html>

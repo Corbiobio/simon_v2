@@ -1,0 +1,223 @@
+$purple: #7945FF;
+$dark_purple :#5C2DD5;
+$blue :#7eaefc;
+$dark_blue: #0c63ee;
+$pink: #fc587c;
+$dark_pink: #c2002a;
+$green: #9dff3b;
+$dark_green: #4e7c20;
+$yellow :#fcc03e;
+$dark_yellow: #b17900;
+
+* {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: $dark_purple;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+.score_container {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .score {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: #FFFFFF;
+        border: 3px solid #000000;
+        box-shadow: 0px 15px 0px #000000;
+        border-radius: 20px;
+        width: 150px;
+        height: 120px;
+
+        p {
+            height: 50%;
+            font-size: 25px;
+        }
+    }
+}
+
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 35px;
+    background: #FFFFFF;
+    border: 3px solid #000000;
+    box-shadow: 0px 10px 0px #000000;
+    border-radius: 20px;
+}
+
+.container {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .btn_container {
+        display: flex;
+        margin-top: 20px;
+
+        #play {
+            margin-right: 20px;
+        }
+
+        #restart {
+            margin-left: 20px;
+        }
+
+        div {
+            cursor: pointer;
+        }
+
+        div:hover {
+            background-color: rgb(194, 194, 194);
+        }
+    }
+
+
+    .game {
+        margin-top: 30px;
+        background: #FFFFFF;
+        border: 3px solid #000000;
+        box-shadow: 0px 15px 0px #000000;
+        border-radius: 20px;
+        height: 510px;
+        width: 550px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+
+        button {
+            width: 40%;
+            height: 40%;
+            background: #FFFFFF;
+            border: 3px solid #000000;
+            box-shadow: 0px 15px 0px #000000;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            border-color: $purple;
+            box-shadow: 0px 15px 0px $purple;
+        }
+
+        #blue {
+            background-color: $blue;
+            animation-duration: .8s;
+            animation-delay: 0s;
+        }
+
+        #pink {
+            background-color: $pink;
+            animation-duration: .8s;
+            animation-delay: 0s;
+        }
+
+        #green {
+            background-color: $green;
+            animation-duration: .8s;
+            animation-delay: 0s;
+        }
+
+        #yellow {
+            background-color: $yellow;
+            animation-duration: .8s;
+            animation-delay: 0s;
+        }
+    }
+}
+
+//animation
+
+@keyframes blue {
+    0% {
+        background-color: $blue;
+    }
+
+    25% {
+        background-color: $dark_blue;
+    }
+
+    75% {
+        background-color: $dark_blue;
+    }
+
+    100% {
+        background-color: $blue;
+    }
+}
+
+@keyframes pink {
+    0% {
+        background-color: $pink;
+    }
+
+    25% {
+        background-color: $dark_pink;
+    }
+
+    75% {
+        background-color: $dark_pink;
+    }
+
+    100% {
+        background-color: $pink;
+    }
+}
+
+@keyframes green {
+    0% {
+        background-color: $green;
+    }
+
+    25% {
+        background-color: $dark_green;
+    }
+
+    75% {
+        background-color: $dark_green;
+    }
+
+    100% {
+        background-color: $green;
+    }
+}
+
+@keyframes yellow {
+    0% {
+        background-color: $yellow;
+    }
+
+    25% {
+        background-color: $dark_yellow;
+    }
+
+    75% {
+        background-color: $dark_yellow;
+    }
+
+    100% {
+        background-color: $yellow;
+    }
+}
