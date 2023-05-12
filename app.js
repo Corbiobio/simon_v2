@@ -46,13 +46,13 @@ function turn() {
                     set_yellow()
                     break
             }
-        }, i * 1200)
+        }, i * 1000)
     }
-    // place function color click
-    player_turn()
+    //time when color displaying
+    setTimeout(() => {
+        player_turn()
+    }, color_sequence.length * 1000);
 }
-
-
 
 //event for player turn 
 let event_blue = () => {
@@ -78,7 +78,6 @@ let event_yellow = () => {
 
 //make a function check color clicked
 function player_turn() {
-
     //animation on click 
     blue.addEventListener("click", event_blue)
     pink.addEventListener("click", event_pink)
@@ -86,7 +85,6 @@ function player_turn() {
     yellow.addEventListener("click", event_yellow)
 
 }
-
 
 //check if the value is the same
 function check_color_sequence() {
@@ -97,21 +95,13 @@ function check_color_sequence() {
             score_btn.textContent = parseInt(score_btn.textContent) + 1
             setTimeout(() => {
                 turn()
-            }, 1500)
+            }, 1200)
         }
     } else {
         restart_game()
         play_restart.textContent = "play"
     }
 }
-
-
-
-
-
-
-
-
 
 //start game
 function start_game() {
@@ -145,7 +135,6 @@ play_restart.addEventListener("click", () => {
         play_restart.textContent = "play"
     }
 })
-
 
 //put and remove color (animation)
 function set_blue() {
