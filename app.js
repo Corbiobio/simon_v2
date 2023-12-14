@@ -46,7 +46,7 @@ function turn() {
                     set_yellow()
                     break
             }
-        }, i * 1000)
+        }, i * 1100)
     }
     //time when color displaying
     setTimeout(() => {
